@@ -8,13 +8,13 @@ import Menu from '@mui/material/Menu';
 import MenuIcon from '@mui/icons-material/Menu';
 import Container from '@mui/material/Container';
 import Avatar from '@mui/material/Avatar';
-import Button from '@mui/material/Button';
-import Tooltip from '@mui/material/Tooltip';
-import MenuItem from '@mui/material/MenuItem';
-import AdbIcon from '@mui/icons-material/Adb';
 
-const pages = ['Home', 'Details', 'Projects','Events'];
-const settings = ['LinkedIn'];
+import AdbIcon from '@mui/icons-material/MilitaryTech';
+import { Link } from 'react-router-dom';
+import { Button } from '@mui/material';
+
+
+
 
 function Navbar() {
   const [anchorElNav, setAnchorElNav] = React.useState(null);
@@ -23,9 +23,7 @@ function Navbar() {
   const handleOpenNavMenu = (event) => {
     setAnchorElNav(event.currentTarget);
   };
-  const handleOpenUserMenu = (event) => {
-    setAnchorElUser(event.currentTarget);
-  };
+ 
 
   const handleCloseNavMenu = () => {
     setAnchorElNav(null);
@@ -43,8 +41,8 @@ function Navbar() {
           <Typography
             variant="h6"
             noWrap
-            component="a"
-            href="/"
+            component={Link}
+            to='/'
             sx={{
               mr: 2,
               display: { xs: 'none', md: 'flex' },
@@ -87,11 +85,7 @@ function Navbar() {
                 display: { xs: 'block', md: 'none' },
               }}
             >
-              {pages.map((page) => (
-                <MenuItem key={page} onClick={handleCloseNavMenu}>
-                  <Typography textAlign="center">{page}</Typography>
-                </MenuItem>
-              ))}
+              
             </Menu>
           </Box>
           <AdbIcon sx={{ display: { xs: 'flex', md: 'none' }, mr: 1 }} />
@@ -114,24 +108,18 @@ function Navbar() {
             KLU
           </Typography>
           <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
-            {pages.map((page) => (
-              <Button
-                key={page}
-                onClick={handleCloseNavMenu}
-                sx={{ my: 2, color: 'white', display: 'block' }}
-              >
-                {page}
-              </Button>
-            ))}
+          <Button color="inherit" component={Link} to="/"> HOME </Button> {/*  It is a Personal Page*/}
+          <Button color="inherit" component={Link} to="/details">DETAILS</Button>
+          <Button color="inherit" component={Link} to="/projects">PROJECTS</Button>
+          <Button color="inherit" component={Link} to="/events">EVENTS</Button>
           </Box>
 
           <Box sx={{ flexGrow: 0 }}>
-            <Tooltip title="Open settings">
-              <IconButton onClick={handleOpenUserMenu} sx={{ p: 0 }}>
+        
+              <IconButton sx={{ p: 0 }}>
                 <Avatar alt="Remy Sharp" src="https://media.licdn.com/dms/image/D5603AQFUEgO9hV6S2g/profile-displayphoto-shrink_800_800/0/1691720516156?e=1705536000&v=beta&t=XtL7lbqZWrDNo6n92cthM7vpXgupTRXK8Lm62gx9n1E" sx={{ width: 76, height: 76 }}  />
               </IconButton>
-            </Tooltip>
-            <Menu
+             <Menu
               sx={{ mt: '45px' }}
               id="menu-appbar"
               anchorEl={anchorElUser}
@@ -147,11 +135,7 @@ function Navbar() {
               open={Boolean(anchorElUser)}
               onClose={handleCloseUserMenu}
             >
-              {settings.map((setting) => (
-                <MenuItem key={setting} onClick={handleCloseUserMenu}>
-                  <Typography textAlign="center">{setting}</Typography>
-                </MenuItem>
-              ))}
+              
             </Menu>
           </Box>
         </Toolbar>
