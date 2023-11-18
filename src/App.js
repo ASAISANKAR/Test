@@ -2,9 +2,9 @@ import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import './App.css';
 
 import Personal from './Pages/Personal';
-import { Details } from '@mui/icons-material';
 import Projects from './Pages/Projects';
 import Events from './Pages/Events';
+import Details from './Pages/Details';
 
 function App() {
   return (
