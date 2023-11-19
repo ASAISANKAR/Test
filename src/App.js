@@ -5,6 +5,7 @@ import Personal from './Pages/Personal';
 import Projects from './Pages/Projects';
 import Events from './Pages/Events';
 import Details from './Pages/Details';
+import Feedback from './Pages/Feedback';
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
       <Route path='/details' element={<Details />} />
       <Route path='/projects' element={<Projects />} />
       <Route path='/events' element={<Events />} />
+      <Route path='/feedback' element={<Feedback />} />
       </Routes>
       </BrowserRouter>
     </div>

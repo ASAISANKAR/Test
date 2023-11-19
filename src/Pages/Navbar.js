@@ -112,6 +112,7 @@ function Navbar() {
           <Button color="inherit" component={Link} to="/details">DETAILS</Button>
           <Button color="inherit" component={Link} to="/projects">PROJECTS</Button>
           <Button color="inherit" component={Link} to="/events">EVENTS</Button>
+          <Button color="inherit" component={Link} to="/feedback">Feed Back</Button>
           </Box>
 
           <Box sx={{ flexGrow: 0 }}>
