@@ -6,7 +6,7 @@ import Projects from './Pages/Projects';
 import Events from './Pages/Events';
 import Details from './Pages/Details';
 import Feedback from './Pages/Feedback';
-
+ 
 function App() {
   return (
     <div className="App">

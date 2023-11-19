@@ -1,24 +1,42 @@
-import React from 'react';
+import React, { useState } from 'react';
+import { Link, useNavigate } from "react-router-dom"; 
+import axios from 'axios';
 import './FeedbackForm.css';
 import Navbar from './Navbar';
-import { Link } from 'react-router-dom';
-function Feedback() {
- 
+import { Button } from '@mui/material';
+function FeedbackForm() {
+  const [formData, setFormData] = useState({
+    experience: 'Excellent',
+    suggestion: '',
+    comments: '',
+  });
 
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormData({ ...formData, [name]: value });
   };
- 
 
+  const navigate = useNavigate();
 
+  const handleSubmit = (event) => {
+    event.preventDefault();
 
+    axios.post('http://localhost:6969/feedback', formData)
+      .then((response) => { 
+        console.log(response.data);
+        navigate("/Home");
+      })
+      .catch((err) => {
+        console.log(err);
+      });
+  };
 
   return (
     <div>
-      <Navbar />
 
+    <Navbar />
     <div className="feedback-form-container">
+
       <form onSubmit={handleSubmit}>
         <label className="feedback-label">
           Overall Experience:
@@ -46,11 +64,11 @@ function Feedback() {
             onChange={handleChange}
           ></textarea>
         </label>
-        <button type="submit" component={Link} to="/">Submit Feedback</button>
+        <Button type="submit" className="submit-button" component={Link} to="/">Submit Feedback</Button>
       </form>
     </div>
     </div>
-  );
+      );
 }
 
-export default Feedback;
+export default FeedbackForm;
