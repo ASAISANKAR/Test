@@ -1,34 +1,18 @@
-import React, { useState } from 'react';
-import { useNavigate } from "react-router-dom"; 
-import axios from 'axios';
+import React from 'react';
 import './FeedbackForm.css';
 import Navbar from './Navbar';
+import { Link } from 'react-router-dom';
 function Feedback() {
-  const [formData, setFormData] = useState({
-    experience: 'Excellent',
-    suggestion: '',
-    comments: '',
-  });
+ 
 
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormData({ ...formData, [name]: value });
   };
+ 
 
-  const navigate = useNavigate();
 
-  const handleSubmit = (event) => {
-    event.preventDefault();
 
-    axios.post('https://saisankar.netlify.app/feedback', formData)
-      .then((response) => { 
-        console.log(response.data);
-        navigate("/");
-      })
-      .catch((err) => {
-        console.log(err);
-      });
-  };
 
   return (
     <div>
@@ -62,7 +46,7 @@ function Feedback() {
             onChange={handleChange}
           ></textarea>
         </label>
-        <button type="submit" className="submit-button">Submit Feedback</button>
+        <button type="submit" component={Link} to="/">Submit Feedback</button>
       </form>
     </div>
     </div>
