@@ -9,8 +9,9 @@ import './Tourism.css'; // Import the CSS file for styling
 
 export default function Tourism() {
   return (
-    <div className="tourism-container">
+    <div>
       <Navbar />
+    <div className="tourism-container">
       <h1 className="tourism-title">Tourist & Hospitality Management System</h1>
       <div className="description-container">
         <h2 className="description-heading">Description:</h2>
@@ -28,6 +29,7 @@ export default function Tourism() {
       <img src={About} alt="Home" className="section-image" />
       <h2 className="section-heading">Contact Page</h2>
       <img src={contact} alt="Home" className="section-image" />
+    </div>
     </div>
   );
 }
