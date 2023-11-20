@@ -6,6 +6,8 @@ import Projects from './Pages/Projects';
 import Events from './Pages/Events';
 import Details from './Pages/Details';
 import Feedback from './Pages/Feedback';
+import Tourism from './Projects/Tourism';
+import SIH from './Events/SIH';
  
 function App() {
   return (
@@ -17,6 +19,9 @@ function App() {
       <Route path='/projects' element={<Projects />} />
       <Route path='/events' element={<Events />} />
       <Route path='/feedback' element={<Feedback />} />
+      <Route path='/tourism' element={<Tourism />} />
+      <Route path='/sih' element={<SIH />} />
+      
       </Routes>
       </BrowserRouter>
     </div>

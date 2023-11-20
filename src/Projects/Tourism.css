@@ -1,0 +1,36 @@
+/* Tourism.css */
+
+.tourism-container {
+    padding: 20px;
+    text-align: center;
+  }
+  
+  .tourism-title {
+    color: #333;
+  }
+  
+  .description-container {
+    margin-bottom: 20px;
+  }
+  
+  .description-heading {
+    font-size: 20px;
+    color: #555;
+  }
+  
+  .description-text {
+    color: #777;
+  }
+  
+  .section-heading {
+    margin-top: 30px;
+    font-size: 24px;
+    color: #333;
+  }
+  
+  .section-image {
+    max-width: 100%;
+    margin-top: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  

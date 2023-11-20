@@ -1,0 +1,47 @@
+/* SIH.css */
+
+/* Container styles */
+.tourism-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* Title styles */
+.tourism-title {
+  color: #333;
+  font-size: 28px;
+  margin-bottom: 20px;
+}
+
+/* Description container styles */
+.description-container {
+  margin-bottom: 20px;
+}
+
+/* Description text styles */
+.description-text {
+  text-align: justify;
+  line-height: 1.5;
+}
+
+/* Category container styles */
+.category-container {
+  display: flex;
+  align-items: baseline;
+}
+
+/* Category header styles */
+.category-container h2 {
+  margin-right: 10px;
+}
+
+/* Category text styles */
+.category-text {
+  font-weight: bold;
+}
+
+
+
+
+
