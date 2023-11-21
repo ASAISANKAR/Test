@@ -68,25 +68,30 @@ function Navbar() {
               <MenuIcon />
             </IconButton>
             <Menu
-              id="menu-appbar"
-              anchorEl={anchorElNav}
-              anchorOrigin={{
-                vertical: 'bottom',
-                horizontal: 'left',
-              }}
-              keepMounted
-              transformOrigin={{
-                vertical: 'top',
-                horizontal: 'left',
-              }}
-              open={Boolean(anchorElNav)}
-              onClose={handleCloseNavMenu}
-              sx={{
-                display: { xs: 'block', md: 'none' },
-              }}
-            >
-              
-            </Menu>
+  id="menu-appbar"
+  anchorEl={anchorElNav}
+  anchorOrigin={{
+    vertical: 'bottom',
+    horizontal: 'left',
+  }}
+  keepMounted
+  transformOrigin={{
+    vertical: 'top',
+    horizontal: 'left',
+  }}
+  open={Boolean(anchorElNav)}
+  onClose={handleCloseNavMenu}
+  sx={{
+    display: { xs: 'block', md: 'none' },
+  }}
+>
+  <Button color="inherit" component={Link} to="/">HOME</Button>
+  <Button color="inherit" component={Link} to="/details">DETAILS</Button>
+  <Button color="inherit" component={Link} to="/projects">PROJECTS</Button>
+  <Button color="inherit" component={Link} to="/events">EVENTS</Button>
+  <Button color="inherit" component={Link} to="/feedback">Feedback</Button>
+</Menu>
+
           </Box>
           <AdbIcon sx={{ display: { xs: 'flex', md: 'none' }, mr: 1 }} />
           <Typography
