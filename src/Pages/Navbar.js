@@ -123,7 +123,7 @@ function Navbar() {
           <Box sx={{ flexGrow: 0 }}>
         
               <IconButton sx={{ p: 0 }}>
-                <Avatar alt="Remy Sharp" src="https://media.licdn.com/dms/image/D5603AQFUEgO9hV6S2g/profile-displayphoto-shrink_800_800/0/1691720516156?e=1705536000&v=beta&t=XtL7lbqZWrDNo6n92cthM7vpXgupTRXK8Lm62gx9n1E" sx={{ width: 76, height: 76 }}  />
+                <Avatar alt="Remy Sharp" src="https://media.licdn.com/dms/image/D5603AQFUEgO9hV6S2g/profile-displayphoto-shrink_800_800/0/1691720516156?e=1712793600&v=beta&t=meYnXzWbj2fn3IrJd9m5KlUCOkd_kXyLlSfqVxqGLWM" sx={{ width: 76, height: 76 }}  />
               </IconButton>
              <Menu
               sx={{ mt: '45px' }}
